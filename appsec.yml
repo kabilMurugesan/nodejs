@@ -1,5 +1,5 @@
 version: 0.0
-os: linux
+os: linux 
 files:
   - source: /
     destination: /var/www/nodejs
@@ -9,10 +9,6 @@ hooks:
     - location: scripts/before_install.sh
       timeout: 300
       runas: ubuntu
-  # AfterInstall:
-  #   - location: scripts/install.sh
-  #     timeout: 300
-      # runas: ubuntu
   ApplicationStart:
     - location: scripts/application_start.sh
       timeout: 300
