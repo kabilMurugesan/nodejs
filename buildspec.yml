@@ -6,11 +6,10 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
   build:
     commands:
       - echo Build started on `date`
-      - echo Compiling the node code
+      - npm install
   post_build:
     commands:
       - echo build completed
@@ -18,4 +17,5 @@ artifacts:
   files:
     - appspec.yml
     - script/
+    - node_modules/
     - '**/*'
